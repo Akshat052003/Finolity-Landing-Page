@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased;
+}
+.glass-card {
+  @apply backdrop-blur-md bg-dark-light/30 border border-gray-700/50;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-purple to-accent-pink;
+}
+
+.hover-gradient {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.hover-gradient::after {
+  content: '';
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300 bg-gradient-to-r from-accent-blue/10 via-accent-purple/10 to-accent-pink/10;
+}
+
+.hover-gradient:hover::after {
+  @apply opacity-100;
+}
