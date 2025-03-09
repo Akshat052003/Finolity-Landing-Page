@@ -1,4 +1,5 @@
 import React from 'react';
+import myImage from './assets/cover.jpg';
 import { Menu, X, CheckCircle, ArrowRight, Globe2, Rocket, Users2, LineChart, Phone, Mail, MapPin, Clock, Brain, Code, Shield, Database, Asterisk } from 'lucide-react';
 
 function App() {
@@ -137,9 +138,7 @@ function App() {
             
             {/* Right Column - Image */}
             <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl transform lg:translate-y-[-20px]">
-              <img
-                src="/src/assets/cover.jpg"
-                alt="Digital Innovation"
+            <img src={myImage} alt="Digital innovation" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-dark/50 to-transparent"></div>
